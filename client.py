@@ -17,6 +17,7 @@ HIDDEN_DIM = 10
 DROPOUT = 0.2
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 VOCAB_SIZE = int(inputs.max()) + 1
+CLIP = 5
 
 def load_data(inputs, labels, pct_test=0.2):
 
@@ -95,10 +96,3 @@ class FedClient(fl.client.NumPyClient):
 
 
 fl.client.start_numpy_client("[::]:8080", client=FedClient())
-
-
-
-
-
-
-
