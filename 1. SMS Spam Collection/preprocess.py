@@ -38,8 +38,8 @@ def main():
 
     labels = np.array((data.label == "spam").astype(int))
 
-    np.save("./data/labels.npy", labels)
-    np.save("./data/inputs.npy", inputs)
+    np.save("../data/labels.npy", labels)
+    np.save("../data/inputs.npy", inputs)
 
 
 if __name__ == "__main__":
